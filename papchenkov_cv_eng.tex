@@ -1,0 +1,183 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2010 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[14pt,a4paper]{moderncv}
+
+% moderncv themes
+\moderncvtheme[blue]{classic}                 % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+%\moderncvtheme[green]{classic}                % idem
+\usepackage[T2A]{fontenc}
+
+
+% character encoding
+\usepackage[utf8]{inputenc}                   % replace by the encoding you are using
+\usepackage[russian]{babel}
+\renewcommand{\rmdefault}{cmr} % Шрифт с засечками
+\renewcommand{\sfdefault}{cmss} % Шрифт без засечек
+\renewcommand{\ttdefault}{cmtt} % Моноширинный шрифт
+
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}						% if you want to change the width of the column with the dates
+%\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}}  % only for the classic theme, if you want to change the width of your name placeholder (to leave more space for your address details
+%\AtBeginDocument{\recomputelengths}                     % required when changes are made to page layout lengths
+
+% personal data
+\familyname{\newline Папченко}
+\firstname{Владимир}
+
+
+%\title{Resumé title (optional)}               % optional, remove the line if not wanted
+%\address{street and number}{postcode city}    % optional, remove the line if not wanted
+\mobile{89170169283}                    % optional, remove the line if not wanted
+%\phone{phone (optional)}                      % optional, remove the line if not wanted
+%\fax{fax (optional)}                          % optional, remove the line if not wanted
+\email{v.e.papchenko@gmail.com}                      % optional, remove the line if not wanted
+%\homepage{homepage (optional)}                % optional, remove the line if not wanted
+\extrainfo{skype papchenkov} % optional, remove the line if not wanted
+%\photo[64pt]{picture}                         % '64pt' is the height the picture must be resized to and 'picture' is the name of the picture file; optional, remove the line if not wanted
+%\quote{Some quote (optional)}                 % optional, remove the line if not wanted
+
+% to show numerical labels in the bibliography; only useful if you make citations in your resume
+\makeatletter
+\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+\makeatother
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+
+\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+\maketitle
+
+\section{Личные данные}
+\cventry{ФИО}{Папченко Владимир Евгеньевич}{}{}{}{}
+\cvline{Дата рождения}{14 ноября 1986 года}
+\cvline{Пол}{мужской}
+\cvline{Семейное положение}{холост}
+
+\section{Образование}
+\cventry{2009--2012}{Аспирант}{Самарский Государственный Университет Путей Сообщения, 05.13.01 Системный анализ, управление и обработка информации}{Самара}{Тема дисертации:}{Область научных интересов}
+\cventry{2004--2009}{Инженер}{Самарский Государственный Университет Путей Сообщения, Информационные системы и технологии}{Самара}{Тема диплома:}{}  % arguments 3 to 6 can be left empty
+\cventry{2005--2008}{Специалист}{Самарский Государственный Университет Путей Сообщения, Переводчик в сфере профессиональной коммуникации}{Самара}{}{Дополнительное к высшему образование.}
+
+\section{Навыки}
+\cventry{Языки программирования}{Java, Delphi, PL/SQL, JavaScript, Python, Perl}{}{}{}{}
+\cventry{СУБД}{Oracle, MS SQL Server}{}{}{}{}
+\cventry{Web}{JSP, JSTL, Spring MVC, Velocity, HTML, CSS}{}{}{}{}
+\cventry{ОС}{Windows, Debian, SLES}{}{}{}{}
+\cventry{Web-серверы}{Apache, Apache Tomcat}{}{}{}{}
+\cventry{VCS}{Subversion, Git}{}{}{}{}
+\cventry{RAD}{Eclipse, Borland Delphi, MS Visual Studio}{}{}{}{}
+
+\section{Иностранные языки}
+\cvlanguage{Английский}{Технический}{}
+
+\section{Опыт работы}
+%\subsection{Vocational}
+\cventry{2008--н.в.}{Программист}{Самарский ИВЦ ОАО РЖД}{Самара}{}{%
+Проекты:%
+\begin{itemize}%
+\item Система учета занятости учебных классов.
+  \begin{itemize}%
+    \item Обязанности: разработка системы управления заявками на учебные классы.
+    \item Используемые средства и технологии: java, oracle, spring mvc, tomcat.
+  \end{itemize}
+\item Средства для построения отчетов из HP Open View Service Desk.
+  \begin{itemize}%
+    \item Обязанности: 
+      \begin{itemize}%
+        \item Разработаны модули получения данных из HP Open View Service Desk.
+        \item Разработано web-приложение для анализа ключевых показателей работы предприятия.
+        \item Разработаны приложения для построения отчетов в ms excel.      
+    \end{itemize}
+    \item Используемые средства и технологии: java, oracle, spring mvc, tomcat, apache poi. 
+  \end{itemize}
+\item Сайт службы поддержки пользователей.
+  \begin{itemize}%
+    \item Обязанности: доработка, сопровождение, администрирование.
+    \begin{itemize}%
+        \item Разработан модуль интеграции с HP Open View Service Desk.
+        \item Разработан модуль интеграции с системой заявок.
+        \item Разработан модуль отображения информации о текущих простоях систем.      
+    \end{itemize}
+    \item Используемые средства и технологии: php, ms sql server, java, ant.
+  \end{itemize}
+\item Утилиты для автоматизации работы с HP Open View Service Desk.
+  \begin{itemize}%
+    \item Обязанности: разработка приложений для автоматизации рутинных операций с HP Open View Service Desk    
+      \begin{itemize}%
+        \item Разработан модуль генерации плановых нарядов.
+        \item Разработан модуль автоматического закрытия выполненных работ.
+      \end{itemize}
+    \item Используемые средства и технологии: java, ant, eclipse.
+  \end{itemize}
+\item АС Карта рабочих групп. 
+  \begin{itemize}%
+    \item Обязанности: разработка и проектирование приложения для поиска рабочих групп диспетчером службы поддержки.          
+    \item Используемые средства и технологии: oracle, delphi 7.
+  \end{itemize}
+\item[] Также в обязанности входит: сопровождение и доработка АСУ, администрирование СУБД (oracle 9-11), веб-серверов (apache, apache tomcat), ОС (W2k3, SLES 11); разработка средств автоматизации администрирования, мониторинга работоспособности систем.
+  \begin{itemize}
+    \item[]
+  \end{itemize}
+\end{itemize}}
+
+
+
+\section{Увлечения}
+\cvline{Чтение}{\small Description}
+
+\section{Награды, сертификаты, портфолио, проекты}
+
+% \cvline{hobby 2}{\small Description}
+% \cvline{hobby 3}{\small Description}
+
+% \section{Extra 1}
+% \cvlistitem{Item 1}
+% \cvlistitem{Item 2}
+% \cvlistitem[+]{Item 3}            % optional other symbol
+
+% \renewcommand{\listitemsymbol}{-} % change the symbol for lists
+
+% \section{Extra 2}
+% \cvlistdoubleitem{Item 1}{Item 4}
+% \cvlistdoubleitem{Item 2}{Item 5 \cite{book1}}
+% \cvlistdoubleitem{Item 3}{}
+
+% Publications from a BibTeX file without multibib\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% for BibTeX numerical labels
+%\nocite{*}
+%\bibliographystyle{plain}
+%\bibliography{publications}       % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}   % 'publications' is the name of a BibTeX file
+
+\begin{thebibliography}{99}
+\bibitem{book1}
+Кацюба О.А., Волныкин А.Н. Идентификация многомерных по входу стационарных линейных динамических систем // Известия Самарского научного центра Российской академии наук. - 2006. – С. 1026-1033.
+\bibitem{book2}
+Кацюба О.А., Жданов А.И. Идентификация методом наименьших квадратов параметров уравнений авторегрессии с аддитивными ошибками измерений// Автоматика и телемеханика. - 1982. - №2. – с. 29-38 .
+\bibitem{book3}
+Stoica P., Soderstrom T. Bias correction in least-squares identification// Int. J. Control. - 1982. - v. 35, № 3. - p. 452.
+\end{thebibliography}
+
+\end{document}
+
+
+%% end of file `template_en.tex'.

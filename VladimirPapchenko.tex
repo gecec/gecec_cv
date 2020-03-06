@@ -1,0 +1,162 @@
+%
+% LaTeX source of my resume
+% =========================
+%
+% Heavily commented to to fit even LaTeX beginners (hopefully).
+%
+% See the `README.md` file for more info.
+%
+% This file is licensed under the CC-NC-ND Creative Commons license.
+%
+
+
+% Start a document with the here given default font size and paper size.
+\documentclass[10pt,a4paper]{article}
+
+% Set the page margins.
+\usepackage[a4paper,margin=0.5in]{geometry}
+
+% Setup the language.
+\usepackage[english]{babel}
+\hyphenation{Some-long-word}
+
+% Makes resume-specific commands available.
+\usepackage{resume}
+
+
+\begin{document}  % begin the content of the document
+\sloppy  % this to relax whitespacing in favour of straight margins
+
+
+% title on top of the document
+\maintitle{Vladimir Papchenko}{Last update on \today}
+
+\nobreakvspace{0.3em}  % add some page break averse vertical spacing
+
+\noindent\href{mailto:v.e.papchenko.at.gmail.dot.com}{v.e.papchenko\mbox{}@\mbox{}gmail.com}\sbull
+\textsmaller{+}972 53-543-9214\sbull
+%{\newnums cies010} \emph{(Skype)}\sbull
+\href{https://www.linkedin.com/in/vladimir-papchenko}{www.linkedin.com/in/vladimir-papchenko}\sbull
+\href{https://github.com/gecec}{github.com/gecec}
+\\
+% Mathenesserplein 84\sbull
+% 3022\thinspace {\large \sc ld}\sbull
+% Haifa\sbull
+Israel
+
+\spacedhrule{0.9em}{-0.4em}  % a horizontal line with some vertical spacing before and after
+
+\roottitle{Summary}  % a root section title
+
+\vspace{-1.3em}  % some vertical spacing
+\begin{multicols}{2}  % open a multicolumn environment
+\noindent
+I am a software developer and dedicated to making cool things work. I know how to make processing of real-life data effective and stable, what algorithms to choose in each case for the best performance. I can design and implement useful and maintainable API and choose the best way to store and process data. I learned a number of programming languages on my programming journey started in 2000 including Pascal/Delphi, ABAP, Java, so I'm  language-agnostic and ready to learn a new one in time of need, although Java remains my main language for the last several years.
+\end{multicols}
+
+\spacedhrule{0.2em}{-0.3em}
+\roottitle{Skills}
+
+\inlineheadsection  % special section that has an inline header with a 'hanging' paragraph
+  {Technical expertise:}
+  {Software design and implementation, with(in) a team. Solid knowledge of algorithms, Object Oriented Programming, Java Core, design patterns, J2EE, Spring Framework (boot, core, web, security, jdbc templates), EJB, REST, Swagger, SQL, SOAP, JAX-RS, MyBatis, Liquibase, JUnit, Mockito, Tomcat, JBoss/Wildfly, Git, Maven, Hudson/Jenkins, Docker, Jira, GitLab, microservice architecture. Has experience with many data storage technologies: PostgreSQL, Oracle, MS SQL Server, MongoDB. Has base knowledge of frontend technologies: HTML, CSS, Javascript, JSF, Primefaces, AngularJS, ReactJS. Linux advanced user (Debian, Ubuntu, RHEL).}
+
+\vspace{0.3em}
+\inlineheadsection
+  {Natural languages:}
+  {English \emph{(fluent)}, Hebrew \emph{(intermediate)}, Russian \emph{(native)}}
+
+\spacedhrule{1.6em}{-0.4em}
+
+\roottitle{Experience}
+
+\headedsection  % sets the header for the section and includes any subsections
+  {\href{https://www.verint.com}{Verint Systems}}
+  {\textsc{Israel}} {%
+  \headedsubsection
+    {Software Developer}
+    {2019 -- now}
+    {\bodytext{Backend development using Java, Spring Framework, Wildfly, PostgreSQL, ElasticSearch, Docker.}}
+}
+
+\headedsection  % sets the header for the section and includes any subsections
+  {\href{}{Freelance}}
+  {\textsc{}} {%
+  \headedsubsection
+    {Software Developer}
+    {2018 -- 2019}
+    {\bodytext{I worked as a freelancer for a small project that helped to manage and monitor self-driving trucks. I was developing a backend and frontend parts of the system. Backend was built using Java, Spring Boot, Docker and MongoDB, frontend - using ReactJS and LeafletJS. I also took part in system design and architecture development.}}
+  }
+
+\headedsection  % sets the header for the section and includes any subsections
+  {\href{http://www.rtlabs.ru}{RTLabs}}
+  {\textsc{Samara, Russia}} {%
+  \headedsubsection
+    {Java Developer}
+    {2017 -- 2019}
+    {\bodytext{RTLabs is a big development company that builds large scalable systems for electronic governmnent, also supplying many other services. I was developing projects helping to design protocols and interfaces for messaging through a huge information bus. Firstly, I rewrote one of the projects from Java 7 to Java 8 and Spring Framework (used DI, boot, Web, security). Then I was a leading backend developer at the next project, took part in building of system architecture, implemented backend (Java, PostgreSQL) and frontend parts (JSF). I also participated in several side projects in Java mostly making backend parts and small pieces of frontend (in AngularJS).}}
+}
+
+\headedsection  % sets the header for a subsection and contains usually body text
+  {\href{http://inform.gazprom.ru/}{Gazprom Inform}}
+  {\textsc{Samara, Russia}} {%
+  \headedsubsection
+    {Lead Software Engineer}
+    {2013 -- 2017}
+    {\bodytext{Gazprom Inform is an IT-company providing solutions based on SAP for Gazprom branches. I was an ABAP developer and I was responsible for development of accounting, financial and real-estate modules of SAP project for a big Gazprom branch.}}
+}
+
+\headedsection
+  {\href{http://www.rzd.ru/}{RZD}}
+  {\textsc{Samara, Russia}} {%
+
+  \headedsubsection
+    {Software Developer}
+    {2008 -- 2012}
+    {\bodytext{I was working at a huge IT-department of Russian Railway company (RZD). I was a software developer in Java(Spring, Tomcat), Delphi, PHP, Javascript. I used Oracle and MS SQL Server databases. Also I was developing infrastructure tools in Perl, Python and Bash.}}
+}
+
+\spacedhrule{-0.2em}{-0.4em}
+
+\roottitle{Education}
+
+\headedsection
+  {\href{https://www.samgups.ru}{Samara State Railway University}}
+  {\textsc{Samara, Russia}} {%
+  \headedsubsection
+    {Master degree in Computer Science}
+    {2004 -- 2009}
+    {\bodytext{Got knowledge of computer science, software design and development, information theory, cybersecurity and networks.}}
+}
+
+% \headedsection
+%   {\href{http://www.tudelft.nl/en}{Samara State Railway University}}
+%   {\textsc{Samara, Russia}} {%
+%   \headedsubsection
+%     {Studied for Ph.D.}
+%     {2009 -- 2012}
+%     {\bodytext{Mathematical modeling, numerical methods and software complexes.}}
+% }
+
+% \headedsection
+%   {\href{http://www.libanonlyceum.nl}{Samara State Railway University}}
+%   {\textsc{Samara, Russia}} {%
+%   \headedsubsection
+%     {Interpreter in professional area (IT, English) \textnormal{~(secondary education)}}
+%     {2005 -- 2008} {}
+% }
+
+\spacedhrule{0.5em}{-0.4em}
+
+
+
+% \roottitle{Side projects}
+%
+% \inlineheadsection
+%   {Telegram bot for learning Hebrew.}
+%   {Built with Java, Spring Boot and Telegram Bots API.}
+
+
+\end{document}
+
+＀
